@@ -1,42 +1,54 @@
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71004678-6d47-4f4f-ac74-6732bdc95686/85f2613a-53f8-4842-91c9-edd544528b93/Untitled.png)
+## framework
 
-**framework**
+![Untitled (4)](https://github.com/hp0724/new_technologies/assets/75898031/5add9ca5-b0e1-4de7-bc5a-35061a009870)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71004678-6d47-4f4f-ac74-6732bdc95686/518f4643-7033-4388-a424-8d81fa5ab19a/Untitled.png)
 
-[AI-Hub](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71623)
-
+## [AI-Hub](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71623)
 **Download data needed for the project from AI HUB**
+![Untitled (5)](https://github.com/hp0724/new_technologies/assets/75898031/f826304a-ded5-43d6-a5a6-7d98d7f417f6)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71004678-6d47-4f4f-ac74-6732bdc95686/d822a9c1-664b-49b7-8c0b-79889c98350d/Untitled.png)
 
-**Download the modules required for execution.**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71004678-6d47-4f4f-ac74-6732bdc95686/9b11f9ca-3ffd-4271-96cc-37f2ad9ba179/Untitled.png)
 
+
+## openPCdet
 **OpenPCDet is a clear and simple standalone open source project for LiDAR-based 3D object detection.**
+![Untitled (6)](https://github.com/hp0724/new_technologies/assets/75898031/b87886ac-b610-40b2-94f8-d94616825bbc)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71004678-6d47-4f4f-ac74-6732bdc95686/46dd28f1-8dfe-4263-9702-b5a524a70013/Untitled.png)
 
 **Clone OpenPCdet through git.**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/71004678-6d47-4f4f-ac74-6732bdc95686/d44d7cfe-2b6e-40a4-878d-78ce92f03ebd/Untitled.png)
+![Untitled (7)](https://github.com/hp0724/new_technologies/assets/75898031/f45f47a6-39fb-4adb-bd4f-018a0983042a)
 
+
+### Spconv
 **Install spconv for your cuda version**
+![Untitled (8)](https://github.com/hp0724/new_technologies/assets/75898031/eb52aedc-f633-4f82-97f1-757cd951158a)
+
+
+### install module
+**Download the modules required for execution.**
+![Untitled (9)](https://github.com/hp0724/new_technologies/assets/75898031/8a8febe8-3ca7-4cfb-bee4-de23b960c66a)
+
+
+
+## Run OpenPCDet setup.py
 
 ```jsx
 !python3 setup.py develop
 ```
 
-**Run OpenPCDet setup.py**
+
+### Run nuscenes_models cbgs_voxel0075_res3d_centerpoint
 
 ```jsx
 !python demo.py --cfg_file cfgs/nuscenes_models/cbgs_voxel0075_res3d_centerpoint.yaml --ckpt cfgs/nuscenes_models/cbgs_voxel0075_centerpoint_nds_6648.pth --data_path ../data/openData/training/file_name_000000.bin
 ```
 
-**Run nuscenes_models cbgs_voxel0075_res3d_centerpoint** 
+## Visualization in local
 
 **This is an issue that cannot be visualized in colab, so it is visualized locally.**
+**using picle file for visulization**
 
 ```jsx
 from visual_utils import visualize_utils as V
@@ -72,4 +84,5 @@ for i in range(10):
         print('{0:06d} Finish'.format(i))
 ```
 
-**Visualization using pickles saved in colab**
+
+
