@@ -50,39 +50,64 @@
 **This is an issue that cannot be visualized in colab, so it is visualized locally.**
 **using picle file for visulization**
 
+### Driving Environment
+
+**On python 3.9**   
+**Using PyCharm Community Edition**
+
+### Required Module
+
+**Run on the terminal**
+
+**mayavi**
 ```jsx
-from visual_utils import visualize_utils as V
-import pickle
-import os
-from mayavi import mlab
-import torch
-
-mlab.init_notebook()
-
-for i in range(10):
-    data_dir = 'data_dict/data_dict%06d.pkl' % i
-    pred_dir = 'pred_dict/pred_dict%06d.pkl' % i
-    print('{0:06d} Open Start'.format(i))
-   
-    with open(data_dir, 'rb') as f:
-        data_dict = pickle.load(f)
-
-    with open(pred_dir, 'rb') as f:
-        pred_dicts = pickle.load(f)
-
-    print('{0:06d} Open Success'.format(i))
-    
-    if len(data_dict) > 0:
-        mlab.options.offscreen = True
-       
-        V.draw_scenes(
-            points=data_dict['points'][:, 1:], ref_boxes=pred_dicts[0]['pred_boxes'],
-            ref_scores=pred_dicts[0]['pred_scores'], ref_labels=pred_dicts[0]['pred_labels']
-        )
-        result_dir = 'image/result%06d.png' % i
-        mlab.savefig(result_dir)
-        print('{0:06d} Finish'.format(i))
+pip install mayavi
 ```
 
+**torch**
+```jsx
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+*Install Torch Version according to your nvidia driver*
 
+**tqdm**
+```jsx
+pip install tqdm
+```
+**spconv**
+```jsx
+pip install spconv-cu113
+```
+**pypcd**
+```jsx
+pip install pypcd
+```
+**cv2**
+```jsx
+pip install opencv-python
+```
+### Setting
+**1. In lib\pypcd\__init__.py, modify this**
+```jsx
+from pypcd import * -> from .pypcd import *
+```
+**2. In lib\pypcd\pypcd.py, change to file that provided**
 
+### main.py
+**Code that converts pkl files generated from SWTermProject.ipynb file into predicted images**
+
+***Note***  
+data_dir, pred_dir path needs to be changed to path with pkl file   
+result_dir path needs to be changed to the location where the image will be stored
+### utils.py
+**Request to create an image at main.py and the file will convert it to an image**
+
+### pcd_To_Bin.py
+**Convert pcd file with bin file (field value x,y,z,intensity required)**
+
+***How to use***
+```jsx
+python pcd_To_Bin.py --pcd_path [pcd_path] --bin_path [bin_path]
+```
+### video.py
+**Play the saved predicted images in video format**
