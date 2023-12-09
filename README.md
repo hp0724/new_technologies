@@ -25,10 +25,36 @@
 **Install spconv for your cuda version**
 ![Untitled (8)](https://github.com/hp0724/new_technologies/assets/75898031/eb52aedc-f633-4f82-97f1-757cd951158a)
 
+### Required Module
 
-### install module
-**Download the modules required for execution.**
-![Untitled (9)](https://github.com/hp0724/new_technologies/assets/75898031/8a8febe8-3ca7-4cfb-bee4-de23b960c66a)
+**Run on the terminal**
+
+**mayavi**
+```jsx
+pip install mayavi
+```
+
+**torch**
+```jsx
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+*Install Torch Version according to your nvidia driver*
+
+**tqdm**
+```jsx
+pip install tqdm
+```
+**spconv**
+```jsx
+pip install spconv-cu113
+```
+**pypcd**
+```jsx
+pip install pypcd
+```
+**cv2**
+```jsx
+pip install opencv-python
 
 
 
