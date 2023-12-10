@@ -93,7 +93,7 @@ from pypcd import * -> from .pypcd import *
 ```
 **2. In lib\pypcd\pypcd.py, change to file that provided**
 
-### main.py
+### visualization.py
 **Code that converts pkl files generated from SWTermProject.ipynb file into predicted images**
 
 ***Note***  
@@ -111,3 +111,7 @@ python pcd_To_Bin.py --pcd_path [pcd_path] --bin_path [bin_path]
 ```
 ### video.py
 **Play the saved predicted images in video format**
+
+
+## started.md
+### If you want to try that project, Refer to [started.md](started.md)
