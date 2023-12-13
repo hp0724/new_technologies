@@ -27,36 +27,51 @@
 
 ### Required Module
 
-**Run on the terminal**
-
-**mayavi**
-```jsx
-pip install mayavi
-```
+**In Colab Environment**
 
 **torch**
 ```jsx
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+!pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 *Install Torch Version according to your nvidia driver*
 
-**tqdm**
-```jsx
-pip install tqdm
-```
 **spconv**
 ```jsx
-pip install spconv-cu113
+!pip install spconv-cu113
 ```
-**pypcd**
+
+**mayavi**
 ```jsx
-pip install pypcd
+!pip install mayavi
 ```
-**cv2**
+
+**av2**
 ```jsx
-pip install opencv-python
+!pip install av2
+```
+
+**korina**
+```jsx
+!pip install kornia==0.6.8
+```
 
 
+**PyOpenGL**
+```jsx
+!pip install PyOpenGL
+```
+
+
+**xvfb**
+```jsx
+!sudo apt-get install xvfb
+```
+
+
+**xvfbwrapper**
+```jsx
+!pip install xvfbwrapper
+```
 
 ## Run OpenPCDet setup.py
 
